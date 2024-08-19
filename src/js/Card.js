@@ -47,6 +47,7 @@ export class Card {
   }
 
   onDelete() {
+    console.log(this.card)
     // перед удалением карточки отписываем ее от всех слушателей
     this.card.removeEventListener("mouseover", this.mouseOverHandler);
     this.card.removeEventListener("mouseout", this.mouseOutHandler);

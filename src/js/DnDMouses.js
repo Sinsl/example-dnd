@@ -17,6 +17,10 @@ export class DnDMouses {
 
   onMouseDown(e) {
     e.preventDefault();
+    
+    if(e.target.classList.contains('card_delete')) {
+        return;
+    }
     // получаем target только если нажатие было на карточке или внутри нее
     const target = e.target.closest(".card");
 
